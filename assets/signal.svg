@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+<title id="title">NyKurEdge / public signal history</title><desc id="desc">Snapshot 2026-09-08. 16 commits across twelve UTC weeks, all authors. Weekly counts: 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 4, 0.</desc>
+<style>text{font-family:Consolas,'Liberation Mono',monospace} .quiet{fill:#9bac9f} .bright{fill:#a3ff70}</style>
+<rect width="960" height="300" rx="12" fill="#080e0c"/>
+<rect x=".5" y=".5" width="959" height="299" rx="12" fill="none" stroke="#26392d"/>
+<text x="32" y="38" font-size="16" letter-spacing="2" class="bright">PUBLIC SIGNAL / NyKurEdge</text>
+<text x="928" y="38" text-anchor="end" font-size="14" class="quiet">12 WEEKS · UTC</text>
+<path d="M32 58H928" stroke="#26392d"/>
+<text x="32" y="127" font-size="54" fill="#edf7ef">16</text>
+<text x="34" y="156" font-size="14" class="quiet">COMMITS</text>
+<text x="34" y="180" font-size="13" class="quiet">ALL AUTHORS</text>
+<path d="M192 82V218" stroke="#26392d"/>
+<path d="M222 110H926" stroke="#17271d"/><path d="M222 155H926" stroke="#17271d"/><path d="M222 200H926" stroke="#17271d"/><rect x="230" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="288" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="346" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="404" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="462" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="520" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="578" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="636" y="207" width="34" height="3" rx="3" fill="#26392d"/><rect x="694" y="158.0" width="34" height="52.0" rx="3" fill="#a3ff70"/><text x="711" y="148.0" text-anchor="middle" font-size="14" fill="#edf7ef">4</text><rect x="752" y="106.0" width="34" height="104.0" rx="3" fill="#a3ff70"/><text x="769" y="96.0" text-anchor="middle" font-size="14" fill="#edf7ef">8</text><rect x="810" y="158.0" width="34" height="52.0" rx="3" fill="#a3ff70"/><text x="827" y="148.0" text-anchor="middle" font-size="14" fill="#edf7ef">4</text><rect x="868" y="207" width="34" height="3" rx="3" fill="#26392d"/><text x="230" y="237" font-size="13" class="quiet">2026-06-22</text>
+<text x="902" y="237" text-anchor="end" font-size="13" class="quiet">CURRENT WEEK*</text>
+<path d="M32 254H928" stroke="#26392d"/>
+<text x="32" y="281" font-size="13" class="quiet">SNAPSHOT 2026-09-08 / *PARTIAL WEEK</text>
+<text x="928" y="281" text-anchor="end" font-size="13" class="bright">OPEN COMMIT HISTORY ↗</text></svg>

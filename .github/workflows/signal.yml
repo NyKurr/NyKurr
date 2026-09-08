@@ -1,0 +1,38 @@
+name: Refresh public signal
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - '.github/workflows/signal.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-signal
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check data boundaries
+        run: python3 -m unittest discover -s tests
+      - name: Refresh public snapshot
+        run: python3 scripts/render.py
+      - name: Commit changed assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/identity.svg assets/signal.svg data/signal.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public signal snapshot'
+            git push
+          fi
