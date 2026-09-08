@@ -32,7 +32,7 @@ class SignalTests(unittest.TestCase):
         self.assertEqual(sum(data["counts"]), 2)
         self.assertEqual(data["week_starts"][-1], "2026-09-07")
         r.validate(data)
-        for svg in (r.identity(), r.signal(data)):
+        for svg in (r.identity(), r.signal(data), r.identity_mobile(), r.signal_mobile(data)):
             ET.fromstring(svg)
             for forbidden in ("<script", "foreignObject", "https://", "http://api"):
                 self.assertNotIn(forbidden, svg)

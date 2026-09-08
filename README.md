@@ -1,4 +1,4 @@
-<a href="https://github.com/NyKurr?tab=repositories"><img src="assets/identity.svg" width="100%" alt="NyKurr — Worlds to explore. Systems to use. Game development, native software, tools and automation." /></a>
+<a href="https://github.com/NyKurr?tab=repositories"><picture><source media="(max-width: 600px)" srcset="assets/identity-mobile.svg" /><img src="assets/identity.svg" width="100%" alt="NyKurr — Worlds to explore. Systems to use. Game development, native software, tools and automation." /></picture></a>
 
 **I build games, desktop software, and the tools around them.**
 My work moves between interactive worlds, native interfaces, and automation that makes software useful beyond the screen.
@@ -36,7 +36,7 @@ Alongside it, I work on tools, software projects, and automation/backend systems
 
 ## 03 / Signal history
 
-<a href="https://github.com/NyKurr/NyKurEdge/commits/main/"><img src="assets/signal.svg" width="100%" alt="Weekly commit activity in the public NyKurEdge repository. Open the commit history for the source data." /></a>
+<a href="https://github.com/NyKurr/NyKurEdge/commits/main/"><picture><source media="(max-width: 600px)" srcset="assets/signal-mobile.svg" /><img src="assets/signal.svg" width="100%" alt="Weekly commit activity in the public NyKurEdge repository. Open the commit history for the source data." /></picture></a>
 
 <sub>A daily snapshot of commits in NyKurEdge, across all authors. This is project activity, not a measure of individual contributions. The dated image stays available if a refresh fails.</sub>
 

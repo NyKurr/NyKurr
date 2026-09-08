@@ -58,12 +58,12 @@ def validate(data):
         raise ValueError("Invalid counts")
 
 
-def svg_open(height, title, desc):
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title desc">
+def svg_open(height, title, desc, width=960):
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc>
 <style>text{{font-family:Consolas,'Liberation Mono',monospace}} .quiet{{fill:#9bac9f}} .bright{{fill:#a3ff70}}</style>
-<rect width="960" height="{height}" rx="12" fill="#080e0c"/>
-<rect x=".5" y=".5" width="959" height="{height-1}" rx="12" fill="none" stroke="#26392d"/>
+<rect width="{width}" height="{height}" rx="12" fill="#080e0c"/>
+<rect x=".5" y=".5" width="{width-1}" height="{height-1}" rx="12" fill="none" stroke="#26392d"/>
 '''
 
 
@@ -129,9 +129,50 @@ def signal(data):
     return out
 
 
+def identity_mobile():
+    out = svg_open(430, "NyKurr / Field terminal", "Worlds to explore. Systems to use.", 560)
+    out += '<defs><clipPath id="contours"><rect x="280" y="72" width="254" height="280"/></clipPath></defs><g clip-path="url(#contours)" fill="none" stroke="#51c987" opacity=".28">'
+    for i in range(22):
+        pts = []
+        for j in range(65):
+            t = j / 64 * math.tau
+            r = 20 + i * 6
+            warp = 1 + .12 * math.sin(3*t + i*.13)
+            pts.append(f"{460+math.cos(t)*r*warp:.1f},{207+math.sin(t)*r*warp:.1f}")
+        out += '<path d="M' + ' L'.join(pts) + 'Z"/>'
+    return out + '''</g><circle cx="30" cy="32" r="4" fill="#a3ff70"/>
+<text x="46" y="39" font-size="21" letter-spacing="2" class="bright">NYKURR / FIELD TERMINAL</text>
+<path d="M26 60H534 M26 364H534" stroke="#26392d"/>
+<text x="24" y="176" font-size="88" font-weight="700" letter-spacing="-6" fill="#edf7ef">NyKurr<tspan class="bright">_</tspan></text>
+<text x="28" y="242" font-size="30" fill="#edf7ef">Worlds to explore.</text>
+<text x="28" y="285" font-size="30" fill="#edf7ef">Systems to use.</text>
+<text x="28" y="333" font-size="20" class="quiet">GAMES · SOFTWARE · AUTOMATION</text>
+<text x="28" y="403" font-size="21" class="bright">EXPLORE THE WORK BELOW ↘</text></svg>'''
+
+
+def signal_mobile(data):
+    validate(data)
+    counts = data["counts"]
+    out = svg_open(350, "NyKurEdge / public signal", f"Snapshot {data['as_of']}. Weekly commit counts, all authors: {counts}", 560)
+    out += f'''<text x="26" y="39" font-size="22" class="bright">PUBLIC SIGNAL / NyKurEdge</text>
+<path d="M26 60H534" stroke="#26392d"/>
+<text x="26" y="101" font-size="23" fill="#edf7ef">{sum(counts)} commits / 12 weeks</text>'''
+    peak = max(max(counts), 1)
+    for i, n in enumerate(counts):
+        h = max(3, n / peak * 105)
+        x = 29 + i * 42
+        out += f'<rect x="{x}" y="{246-h}" width="26" height="{h}" rx="3" fill="{"#a3ff70" if n else "#26392d"}"/>'
+        if n:
+            out += f'<text x="{x+13}" y="{235-h}" text-anchor="middle" font-size="20" fill="#edf7ef">{n}</text>'
+    return out + f'''<text x="26" y="278" font-size="19" class="quiet">ALL AUTHORS · CURRENT WEEK PARTIAL</text>
+<path d="M26 294H534" stroke="#26392d"/>
+<text x="26" y="329" font-size="20" class="quiet">SNAPSHOT {data['as_of']} · UTC</text></svg>'''
+
+
 def write(data):
     validate(data)
     files = {"assets/identity.svg": identity(), "assets/signal.svg": signal(data),
+             "assets/identity-mobile.svg": identity_mobile(), "assets/signal-mobile.svg": signal_mobile(data),
              "data/signal.json": json.dumps(data, indent=2) + "\n"}
     for name, content in files.items():
         path = ROOT / name

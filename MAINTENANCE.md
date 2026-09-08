@@ -1,6 +1,6 @@
 # Field terminal / maintenance
 
-The profile is a native GitHub README with custom SVG artwork, progressive disclosure, and a public-data instrument. All essential content is readable as Markdown without images. The single-column layout avoids fixed-width tables on phones.
+The profile is a native GitHub README with custom SVG artwork, progressive disclosure, and a public-data instrument. All essential content is readable as Markdown without images. The single-column layout avoids fixed-width tables on phones. GitHub-compatible picture elements select compact SVG compositions below 600px.
 
 ## Update
 

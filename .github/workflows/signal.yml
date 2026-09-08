@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/identity.svg assets/signal.svg data/signal.json
+          git add assets/identity.svg assets/signal.svg assets/identity-mobile.svg assets/signal-mobile.svg data/signal.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh public signal snapshot'
             git push
