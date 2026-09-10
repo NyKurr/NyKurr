@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="350" viewBox="0 0 560 350" role="img" aria-labelledby="title desc">
-<title id="title">NyKurEdge / public signal</title><desc id="desc">Snapshot 2026-09-09. Weekly commit counts, all authors: [0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 4, 0]</desc>
+<title id="title">NyKurEdge / public signal</title><desc id="desc">Snapshot 2026-09-10. Weekly commit counts, all authors: [0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 4, 0]</desc>
 <style>text{font-family:Consolas,'Liberation Mono',monospace} .quiet{fill:#9bac9f} .bright{fill:#a3ff70}</style>
 <rect width="560" height="350" rx="12" fill="#080e0c"/>
 <rect x=".5" y=".5" width="559" height="349" rx="12" fill="none" stroke="#26392d"/>
@@ -7,4 +7,4 @@
 <path d="M26 60H534" stroke="#26392d"/>
 <text x="26" y="101" font-size="23" fill="#edf7ef">16 commits / 12 weeks</text><rect x="29" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="71" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="113" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="155" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="197" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="239" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="281" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="323" y="243" width="26" height="3" rx="3" fill="#26392d"/><rect x="365" y="193.5" width="26" height="52.5" rx="3" fill="#a3ff70"/><text x="378" y="182.5" text-anchor="middle" font-size="20" fill="#edf7ef">4</text><rect x="407" y="141.0" width="26" height="105.0" rx="3" fill="#a3ff70"/><text x="420" y="130.0" text-anchor="middle" font-size="20" fill="#edf7ef">8</text><rect x="449" y="193.5" width="26" height="52.5" rx="3" fill="#a3ff70"/><text x="462" y="182.5" text-anchor="middle" font-size="20" fill="#edf7ef">4</text><rect x="491" y="243" width="26" height="3" rx="3" fill="#26392d"/><text x="26" y="278" font-size="19" class="quiet">ALL AUTHORS · CURRENT WEEK PARTIAL</text>
 <path d="M26 294H534" stroke="#26392d"/>
-<text x="26" y="329" font-size="20" class="quiet">SNAPSHOT 2026-09-09 · UTC</text></svg>
+<text x="26" y="329" font-size="20" class="quiet">SNAPSHOT 2026-09-10 · UTC</text></svg>
